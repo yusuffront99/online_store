@@ -1,10 +1,10 @@
 <?php
 
 namespace Database\Factories;
-use Faker\Generator as Faker;
 
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use Faker\Generator as Faker;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
  */
@@ -19,9 +19,10 @@ class ProductFactory extends Factory
     {
         return [
             'title' => $this->faker->word(),
-            'description' => $this->faker->text(120),
+            'description'=> $this->faker->text(),
             'price' => $this->faker->numberBetween(10000, 100000),
             'image' => ''
+
         ];
     }
 }
